@@ -1,0 +1,33 @@
+{
+    "name": "@islamzaoui/securekit",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/index.mjs",
+    "scripts": {
+        "lint": "tsc && prettier --check .",
+        "format": "prettier --write .",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "build": "tsup src/index.ts --format cjs,esm --dts"
+    },
+    "keywords": [
+        "http",
+        "security",
+        "headers",
+        "sveltekit",
+        "svelte",
+        "library"
+    ],
+    "author": "Islam Zaoui",
+    "license": "MIT",
+    "description": "Secure your sveltekit app using http response security headers",
+    "devDependencies": {
+        "@changesets/cli": "^2.27.8",
+        "prettier": "^3.3.3",
+        "tsup": "^8.3.0",
+        "typescript": "^5.6.2"
+    },
+    "peerDependencies": {
+        "@sveltejs/kit": "^2.0.0"
+    }
+}

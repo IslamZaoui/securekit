@@ -1,0 +1,17 @@
+{
+    "name": "monorepo",
+    "private": true,
+    "scripts": {
+        "dev": "bun --filter '*' dev",
+        "build": "bun --filter '*' build",
+        "lint": "bun --filter '*' lint",
+        "format": "prettier --write \"**/*.{json,md}\" &&bun --filter '*' format"
+    },
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "devDependencies": {
+        "prettier": "^3.3.3"
+    }
+}
