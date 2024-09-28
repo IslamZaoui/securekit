@@ -12,6 +12,7 @@
         "apps/*"
     ],
     "devDependencies": {
+        "@changesets/cli": "^2.27.8",
         "prettier": "^3.3.3"
     }
 }
