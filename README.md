@@ -91,4 +91,4 @@ See the [open issues](https://github.com/islamzaoui/securekit/issues) for a list
 
 ## License
 
-[MIT](https://github.com/islamzaoui/securekit) License
+[MIT](https://github.com/IslamZaoui/securekit/blob/main/LICENSE) License
