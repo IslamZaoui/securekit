@@ -25,11 +25,11 @@
     "license": "MIT",
     "description": "Secure your sveltekit app using http response security headers",
     "devDependencies": {
-        "prettier": "^3.3.3",
-        "tsup": "^8.3.0",
-        "typescript": "^5.6.2"
+        "prettier": "catalog:default",
+        "tsup": "catalog:default",
+        "typescript": "catalog:default"
     },
     "peerDependencies": {
-        "@sveltejs/kit": "^2.0.0"
+        "@sveltejs/kit": "catalog:default"
     }
 }

@@ -2,19 +2,19 @@
     "name": "monorepo",
     "private": true,
     "scripts": {
-        "dev": "bun --filter '*' dev",
-        "build:demo": "bun build:packages && bun --filter './apps/demo' build",
-        "build:packages": "bun --filter './packages/*' build",
-        "release": "bun build:packages && changeset publish",
-        "lint": "bun --filter '*' lint",
-        "format": "prettier --write \"**/*.{json,md}\" && bun --filter '*' format"
+        "build": "pnpm run -r build",
+        "dev": "pnpm run -r --parallel --stream dev",
+        "release": "pnpm run -r build && changeset publish",
+        "lint": "prettier --check \"**/*.{json,md}\" && pnpm run -r lint",
+        "format": "prettier --write \"**/*.{json,md}\" && pnpm run -r format"
     },
     "workspaces": [
         "packages/*",
         "apps/*"
     ],
     "devDependencies": {
-        "@changesets/cli": "^2.27.8",
-        "prettier": "^3.3.3"
-    }
+        "@changesets/cli": "catalog:default",
+        "prettier": "catalog:default"
+    },
+    "packageManager": "pnpm@9.11.0"
 }
