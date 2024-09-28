@@ -3,9 +3,10 @@
     "private": true,
     "scripts": {
         "dev": "bun --filter '*' dev",
-        "build": "bun --filter '*' build",
+        "build:demo": "bun build:packages && bun --filter './apps/demo' build",
+        "build:packages": "bun --filter './packages/**' build",
         "lint": "bun --filter '*' lint",
-        "format": "prettier --write \"**/*.{json,md}\" &&bun --filter '*' format"
+        "format": "prettier --write \"**/*.{json,md}\" && bun --filter '*' format"
     },
     "workspaces": [
         "packages/*",
