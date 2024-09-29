@@ -2,8 +2,8 @@
 
 Secure your [sveltekit](https://kit.svelte.dev/) app using [http response headers](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html)
 
-[![Lint](https://github.com/IslamZaoui/securekit/actions/workflows/lint.yaml/badge.svg)](https://github.com/IslamZaoui/securekit/actions/workflows/lint.yaml)
-[![npm](https://img.shields.io/npm/v/%40islamzaoui%2Fsecurekit)](https://www.npmjs.com/package/@islamzaoui/securekit)
+[![CI/CD](https://github.com/IslamZaoui/securekit/actions/workflows/lint.yaml/badge.svg)](https://github.com/IslamZaoui/securekit/actions/workflows/lint.yaml)
+[![NPM](https://img.shields.io/npm/v/%40islamzaoui%2Fsecurekit)](https://www.npmjs.com/package/@islamzaoui/securekit)
 [![Issues](https://img.shields.io/github/issues/IslamZaoui/securekit)](https://github.com/IslamZaoui/securekit/issues)
 [![License](https://img.shields.io/github/license/IslamZaoui/securekit)](https://github.com/IslamZaoui/securekit/blob/main/LICENSE)
 

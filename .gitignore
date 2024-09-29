@@ -1,3 +1,5 @@
 node_modules
 dist
 .vercel
+bun.lockb
+.turbo
