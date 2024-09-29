@@ -19,6 +19,8 @@ you can also use other package managers like [pnpm](https://pnpm.io/) or [yarn](
 
 ### default headers
 
+this will add the default headers to the response, this will be enough to get your website A grade in [security headers](https://securityheaders.com/)
+
 ```ts
 // src/hooks.server.ts
 import { securityHeaders } from '@islamzaoui/securekit';
@@ -27,6 +29,8 @@ export const handle = securityHeaders().handle;
 ```
 
 ### with custom headers
+
+you can customize the headers you want to set, and override any of the headers available in response headers.
 
 ```ts
 // src/hooks.server.ts
@@ -46,6 +50,8 @@ export const handle = securityHeaders({
 
 ### with multiple handles
 
+you can use [sequence](https://kit.svelte.dev/docs/modules#sveltejs-kit-hooks) to sequencing other handles with `securityHeaders`.
+
 ```ts
 // src/hooks.server.ts
 import { securityHeaders } from '@islamzaoui/securekit';
@@ -61,9 +67,31 @@ export const handle = sequence(
 );
 ```
 
+### delete headers
+
+set the value to `null` to delete the header.
+
+```ts
+// src/hooks.server.ts
+import { securityHeaders } from '@islamzaoui/securekit';
+
+export const handle = securityHeaders({
+    headers: {
+        'Access-Control-Allow-Origin': 'https://yoursite.com',
+        'x-sveltekit-page': null, // this will be deleted
+    },
+});
+```
+
 ## Content Security Policy header
 
 your can use `csp` option in `securityHeaders` to set the `Content-Security-Policy` header directives.
+
+**Note**:
+
+-   `config.csp` directives will override any existing directives in the `Content-Security-Policy` header.
+
+-   `config.csp` directives will extend the existing directives in [svelte.config.js](https://kit.svelte.dev/docs/configuration#csp)
 
 ```ts
 // src/hooks.server.ts

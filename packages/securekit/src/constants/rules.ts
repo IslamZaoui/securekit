@@ -1,4 +1,4 @@
-import { HTTPResponseHeaders } from './types/http';
+import { HTTPResponseHeaders } from '../types/http';
 
 const defaultHeaders: HTTPResponseHeaders = {
     'X-Frame-Options': 'DENY',
@@ -7,7 +7,7 @@ const defaultHeaders: HTTPResponseHeaders = {
     'Permissions-Policy': 'geolocation=(), camera=(), microphone=()',
 };
 
-export const rules = {
+export default {
     /**
      * Default headers for secure headers.
      * @example

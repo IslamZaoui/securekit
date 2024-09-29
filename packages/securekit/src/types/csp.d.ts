@@ -116,5 +116,14 @@ export interface CspDirectives {
 }
 
 export interface Csp {
+    /**
+     *  Content Security Policy header directives.
+     *  @example
+     *  directives: {
+     *      'default-src': ['self'],
+     *      'script-src': ['self', 'https://example.com'],
+     *      'style-src': ['self', 'https://example.com'],
+     *  }
+     */
     directives: CspDirectives;
 }
