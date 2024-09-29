@@ -13,7 +13,12 @@ export const handle = securityHeaders({
 		directives: {
 			'base-uri': ["'self'"],
 			'child-src': ["'self'"],
-			'connect-src': ["'self'", 'ws://localhost:*', "wss://ws-us3.pusher.com", "https://sockjs-us3.pusher.com"],
+			'connect-src': [
+				"'self'",
+				'ws://localhost:*',
+				'wss://ws-us3.pusher.com',
+				'https://sockjs-us3.pusher.com'
+			],
 			'img-src': ["'self'", 'data:'],
 			'font-src': ["'self'", 'data:'],
 			'form-action': ["'self'"],
@@ -22,7 +27,7 @@ export const handle = securityHeaders({
 			'manifest-src': ["'self'"],
 			'media-src': ["'self'", 'data:'],
 			'object-src': ["'none'"],
-			'style-src': ["'self'", "'unsafe-inline'", "https://vercel.live"],
+			'style-src': ["'self'", "'unsafe-inline'", 'https://vercel.live'],
 			'default-src': ["'self'", origin],
 			'script-src': ["'self'", 'https://vercel.live'],
 			'worker-src': ["'self'"]
