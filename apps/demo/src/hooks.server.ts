@@ -1,12 +1,13 @@
 import { dev } from '$app/environment';
-import { rules, securityHeaders } from '@islamzaoui/securekit';
+import { securityHeaders, rules } from '@islamzaoui/securekit';
 
 const origin = dev ? 'http://localhost:5173' : 'https://securekit-demo.vercel.app';
 
 export const handle = securityHeaders({
 	headers: {
 		...rules.defaultHeaders,
-		'Access-Control-Allow-Origin': origin
+		'Access-Control-Allow-Origin': origin,
+		'x-sveltekit-page': null
 	},
 	csp: {
 		directives: {
@@ -21,9 +22,9 @@ export const handle = securityHeaders({
 			'manifest-src': ["'self'"],
 			'media-src': ["'self'", 'data:'],
 			'object-src': ["'none'"],
-			'style-src': ["'self'", "'unsafe-inline'"],
+			'style-src': ["'self'"],
 			'default-src': ["'self'", origin],
-			'script-src': ["'self'", "'unsafe-inline'"],
+			'script-src': ["'self'"],
 			'worker-src': ["'self'"]
 		}
 	},

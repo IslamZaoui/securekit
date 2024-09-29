@@ -36,58 +36,58 @@ export type HTTPResponseHeaders = {
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security | Strict-Transport-Security MDN}
      */
-    'Strict-Transport-Security'?: string;
+    'Strict-Transport-Security'?: string | null;
     /**
      * Better to use csp in securekit function instead
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy | Content-Security-Policy MDN}
      */
-    'Content-Security-Policy'?: string;
+    'Content-Security-Policy'?: string | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy | Referrer-Policy MDN}
      */
-    'Referrer-Policy'?: ReferrerPolicy;
+    'Referrer-Policy'?: ReferrerPolicy | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy | Permissions-Policy MDN}
      */
-    'Permissions-Policy'?: string;
+    'Permissions-Policy'?: string | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection | X-XSS-Protection MDN}
      */
-    'X-XSS-Protection'?: string;
+    'X-XSS-Protection'?: string | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options | X-Frame-Options MDN}
      */
-    'X-Frame-Options'?: 'DENY' | 'SAMEORIGIN';
+    'X-Frame-Options'?: 'DENY' | 'SAMEORIGIN' | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options | X-Content-Type-Options MDN}
      */
-    'X-Content-Type-Options'?: 'nosniff';
+    'X-Content-Type-Options'?: 'nosniff' | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin | Access-Control-Allow-Origin MDN}
      */
-    'Access-Control-Allow-Origin'?: '*' | string | string[];
+    'Access-Control-Allow-Origin'?: '*' | string | string[] | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods | Access-Control-Allow-Methods MDN}
      */
-    'Access-Control-Allow-Methods'?: '*' | HTTPMethods | HTTPMethods[];
+    'Access-Control-Allow-Methods'?: '*' | HTTPMethods | HTTPMethods[] | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers | Access-Control-Allow-Headers MDN}
      */
-    'Access-Control-Allow-Headers'?: '*' | string | string[];
+    'Access-Control-Allow-Headers'?: '*' | string | string[] | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age | Access-Control-Max-Age MDN}
      */
-    'Access-Control-Max-Age'?: number;
+    'Access-Control-Max-Age'?: number | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy | Cross-Origin-Embedder-Policy MDN}
      */
-    'Cross-Origin-Embedder-Policy'?: CrossOriginEmbedderPolicy;
+    'Cross-Origin-Embedder-Policy'?: CrossOriginEmbedderPolicy | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy | Cross-Origin-Opener-Policy MDN}
      */
-    'Cross-Origin-Opener-Policy'?: CrossOriginOpenerPolicy;
+    'Cross-Origin-Opener-Policy'?: CrossOriginOpenerPolicy | null;
     /**
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy | Cross-Origin-Resource-Policy MDN}
      */
-    'Cross-Origin-Resource-Policy'?: CrossOriginResourcePolicy;
+    'Cross-Origin-Resource-Policy'?: CrossOriginResourcePolicy | null;
 };

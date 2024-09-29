@@ -23,7 +23,7 @@ export type Config = {
     /**
      * Content Security Policy Directives to be applied.
      *
-     * This will override any CSP headers set in `headers`.
+     * This will override any CSP headers set in `config.headers`, and extend csp directives in your `svelte.config.js`.
      * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
      * @default undefined
      */
