@@ -3,7 +3,15 @@
     "tasks": {
         "format": {},
         "lint": {},
+        "test": {
+            "dependsOn": ["^build"],
+            "outputs": [".svelte-kit/**", ".vercel/output/**"]
+        },
         "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "preview": {
             "cache": false,
             "persistent": true
         },

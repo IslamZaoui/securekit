@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI
 
 on:
     push:
@@ -16,7 +16,7 @@ jobs:
             - name: Set up bun
               uses: oven-sh/setup-bun@v2
               with:
-                  bun-version: 1.1.29
+                  bun-version: 1.1.30
 
             - name: Install dependencies
               run: bun install --frozen-lockfile
@@ -24,5 +24,8 @@ jobs:
             - name: Run lint
               run: bun lint
 
-            - name: Run build
-              run: bun run build
+            - name: Install playwright
+              run: bunx playwright install
+
+            - name: Run test
+              run: bun run test
