@@ -11,7 +11,8 @@
         "lint": "tsc && prettier --check .",
         "format": "prettier --write .",
         "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-        "build": "tsup src/index.ts --format cjs,esm --dts"
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "test": "bun test"
     },
     "keywords": [
         "http",
@@ -25,6 +26,7 @@
     "license": "MIT",
     "description": "Secure your sveltekit app using http response security headers",
     "devDependencies": {
+        "@types/bun": "^1.1.11",
         "prettier": "^3.1.1",
         "tsup": "^8.3.0",
         "typescript": "^5.0.0"

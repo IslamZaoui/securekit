@@ -3,7 +3,14 @@
     "tasks": {
         "format": {},
         "lint": {},
+        "test": {
+            "outputs": [".svelte-kit/**", ".vercel/output/**"]
+        },
         "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "preview": {
             "cache": false,
             "persistent": true
         },
