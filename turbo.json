@@ -4,6 +4,7 @@
         "format": {},
         "lint": {},
         "test": {
+            "dependsOn": ["^build"],
             "outputs": [".svelte-kit/**", ".vercel/output/**"]
         },
         "dev": {
