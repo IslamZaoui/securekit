@@ -13,18 +13,23 @@ export const handle = securityHeaders({
 		directives: {
 			'base-uri': ["'self'"],
 			'child-src': ["'self'"],
-			'connect-src': ["'self'", 'ws://localhost:*'],
+			'connect-src': [
+				"'self'",
+				'ws://localhost:*',
+				'wss://ws-us3.pusher.com',
+				'https://sockjs-us3.pusher.com'
+			],
 			'img-src': ["'self'", 'data:'],
 			'font-src': ["'self'", 'data:'],
 			'form-action': ["'self'"],
 			'frame-ancestors': ["'self'"],
-			'frame-src': ["'self'"],
+			'frame-src': ["'self'", 'https://vercel.live'],
 			'manifest-src': ["'self'"],
 			'media-src': ["'self'", 'data:'],
 			'object-src': ["'none'"],
-			'style-src': ["'self'"],
+			'style-src': ["'self'", "'unsafe-inline'", 'https://vercel.live'],
 			'default-src': ["'self'", origin],
-			'script-src': ["'self'"],
+			'script-src': ["'self'", 'https://vercel.live'],
 			'worker-src': ["'self'"]
 		}
 	},

@@ -62,7 +62,7 @@ export const handle = sequence(
         headers: {
             ...
         }
-    }),
+    }).handle,
     yourOtherHandle
 );
 ```
@@ -78,9 +78,9 @@ import { securityHeaders } from '@islamzaoui/securekit';
 export const handle = securityHeaders({
     headers: {
         'Access-Control-Allow-Origin': 'https://yoursite.com',
-        'x-sveltekit-page': null, // this will be deleted
+        'x-sveltekit-page': null, // this will be deleted from response haeders
     },
-});
+}).handle;
 ```
 
 ## Content Security Policy header
@@ -98,6 +98,9 @@ your can use `csp` option in `securityHeaders` to set the `Content-Security-Poli
 import { securityHeaders } from '@islamzaoui/securekit';
 
 export const handle = securityHeaders({
+    headers:{
+        ...
+    },
     csp: {
         directives: {
             'script-src': ["'self'",'https://example.com'],
